@@ -1,10 +1,6 @@
 [user]
-	email = xuliuchengxlc@gmail.com
-	name = Liu-Cheng Xu
-[core]
-  excludesfile = ~/.gitexcludes
-  # I have no idea why the python3 feature is broken when committing with vim
-  editor       = nvim
+    name = gaoliang
+    email = xxx@163.com
 [color "branch"]
   current   = bold green
   local     = yellow
@@ -18,8 +14,56 @@
   changed   = yellow
   untracked = red
   nobranch  = red
+
+
+[alias]
+    st = status
+    ci = commit
+    co = checkout
+    ck = checkout
+    br = branch
+    b-v = branch -v
+    b-a = branch -v -a
+    b-D = branch -D
+    dk = difftool
+	sf = ls-files
 [filter "lfs"]
+	required = true
 	clean = git-lfs clean -- %f
 	smudge = git-lfs smudge -- %f
 	process = git-lfs filter-process
-	required = true
+
+[difftool "Kaleidoscope"]
+	cmd = ksdiff --partial-changeset --relative-path \"$MERGED\" -- \"$LOCAL\" \"$REMOTE\"
+
+# If you want to set up Kaleidoscope as the default diff tool,
+# then also set the following variables:
+[difftool]
+	prompt = false
+[diff]
+	tool = Kaleidoscope
+
+[mergetool "Kaleidoscope"]
+	cmd = ksdiff --merge --output \"$MERGED\" --base \"$BASE\" -- \"$LOCAL\" \"$REMOTE\"
+
+# If you want to set up Kaleidoscope as the default merge tool,
+# then also set the following variables:
+[mergetool]
+	prompt = false
+[merge]
+	tool = Kaleidoscope
+[difftool "sourcetree"]
+	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
+	path =
+[mergetool "sourcetree"]
+	cmd = /Applications/Sourcetree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
+	trustExitCode = true
+[commit]
+	template = /Users/gaoliang5/.stCommitMsg
+#[http]
+#	proxy = 10.81.254.21:3128
+#[https]
+#	proxy = 10.81.254.21:3128
+
+#[url "https://"]
+#	insteadOf = git://
