@@ -1,0 +1,17 @@
+{
+  "hosts": {
+    "http://pha.intra.sina.com.cn/api/": {
+      "token": "cli-bf5zpr5nld2aorg65vpbff5otu2a"
+    }
+  },
+  "config": {
+    "editor": "vim"
+  },
+  "aliases": {
+    "rediff": [
+      "diff",
+      "--reviewers",
+      "zhouchen5,zhanjiang,jingdan,shaobo8,xiaobing5,shanxue"
+    ]
+  }
+}
