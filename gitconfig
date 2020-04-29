@@ -27,7 +27,7 @@
     b-D = branch -D
     b-m = branch -m
     dk = difftool
-	sf = ls-files
+    sf = ls-files
 [filter "lfs"]
 	required = true
 	clean = git-lfs clean -- %f
@@ -68,3 +68,5 @@
 
 #[url "https://"]
 #	insteadOf = git://
+[log]
+        date = iso-local
