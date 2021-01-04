@@ -15,7 +15,7 @@
   untracked = red
   nobranch  = red
 
-
+#git config --global alias.b-D branch -D
 [alias]
     st = status
     ci = commit
